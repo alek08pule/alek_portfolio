@@ -1,10 +1,11 @@
-root{
+#root{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   display: block;
+  width: 100%;
 }
 
 body {
@@ -30,7 +31,8 @@ body{
 .bodyAnimation{
   position: relative;
   z-index:-2;
-  max-height: fit-content;
+  min-height: fit-content;
+  
 }
 .ball {
   position: absolute;
@@ -331,10 +333,12 @@ align-items: center;
 .project-containers {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 3rem;
   cursor: pointer;
   margin-inline: 1.5rem;
   margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
 
  
 }
@@ -380,7 +384,7 @@ align-items: center;
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
-  
+  width: 80%;
 }
 .contact-info-upper-container {
   display: flex;
