@@ -69,6 +69,17 @@
    {
        flex-wrap: wrap;
     }
+    .about-details-container
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: centar;
+        align-content: center;
+    }
+    .text-container
+    {
+        padding: 0 1% 0 2%;
+    }
     .contact-info-container {
         margin: 0;
     }
