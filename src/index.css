@@ -29,15 +29,35 @@ body{
  
 }
 .bodyAnimation{
-  position: relative;
-  z-index:-2;
-  min-height: fit-content;
-  
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; 
+  overflow: hidden;
+  pointer-events: none; 
 }
-.ball {
+.star {
   position: absolute;
-  border-radius: 100%;
-  opacity: 0.4;
+  width: 1em; 
+  height: 1em;
+  background: transparent;
+  clip-path: polygon(
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
+    39% 35%
+  );
+  background-color: #fff; 
+  opacity: 0; 
 }
 html{
   scroll-behavior: smooth;
@@ -331,17 +351,15 @@ align-items: center;
   width: 100%;
 }
 .project-containers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem; 
   cursor: pointer;
-  margin-inline: 1.5rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
   justify-content: center;
   align-items: center;
-
- 
 }
+
 .project-details{
   display: flex;
   flex-grow: 1;

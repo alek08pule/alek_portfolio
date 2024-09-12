@@ -1,52 +1,38 @@
+//
+
 import React, { useEffect } from "react";
 import useWindowSize from "../Hooks/useWindowSize";
 
 const colors = ["#0B0909", "#44444C", "#8C8C8C", "#D6D6D6", "#2B89B2"];
-const numBalls = 100;
+const numStars = 120;
 
 const BackgroundAnimation = () => {
-  const { height } = useWindowSize();
-  const { width } = useWindowSize();
+  const { height, width } = useWindowSize();
+
   useEffect(() => {
     const bodyAnimation = document.querySelector(".bodyAnimation");
-    const balls = [];
-    let maxHeight = 530;
-    if (height > 1080 || width < 640) {
-      maxHeight = 2 * height;
+    const stars = [];
+
+    for (let i = 0; i < numStars; i++) {
+      let star = document.createElement("div");
+      star.classList.add("star");
+      star.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}vh`;
+      stars.push(star);
+      bodyAnimation.appendChild(star);
     }
 
-    console.log(height);
-    console.log(maxHeight);
-
-    for (let i = 0; i < numBalls; i++) {
-      let ball = document.createElement("div");
-      ball.classList.add("ball");
-      ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-      ball.style.top = `${Math.floor(Math.random() * maxHeight)}px`;
-      ball.style.transform = `scale(${Math.random()})`;
-      ball.style.width = `${Math.random()}em`;
-      ball.style.height = ball.style.width;
-
-      balls.push(ball);
-      bodyAnimation.append(ball);
-    }
-
-    balls.forEach((el, i) => {
-      let to = {
-        x: Math.random() * (i % 2 === 0 ? -11 : 11),
-        y: Math.random() * 14,
-      };
-
+    stars.forEach((el) => {
       el.animate(
         [
-          { transform: "translate(0, 0)" },
-          { transform: `translate(${to.x}rem, ${to.y}rem)` },
+          { opacity: 0 },
+          { opacity: Math.random() * 0.8 + 0.2 },
+          { opacity: 0 },
         ],
         {
-          duration: (Math.random() + 1) * 2000,
-          direction: "alternate",
-          fill: "both",
+          duration: (Math.random() + 0.5) * 3000,
           iterations: Infinity,
           easing: "ease-in-out",
         }
