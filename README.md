@@ -21,3 +21,31 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/alek08pule/alek_portfolio.git
+2. Navigate to the project directory,
+
+cd alek_portfolio
+
+3. Install dependencies,
+
+npm I
+
+4. Fix the issue,
+
+npm audit fix
+
+4. Start the development server,
+
+npm start
+
+The application will open in your default browser on http://localhost:3000.
+
+Technologies Used
+
+React: JavaScript library for building user interfaces.
+React Router: For routing.
+Styled Components: For styling the application.
+Framer Motion: For animations.
+
+## Credits
+
+- Project inspiration from my wixsite.com/my-site  portfolio.
