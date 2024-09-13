@@ -11,7 +11,7 @@ Welcome to **MyPortfolio**! This is a personal portfolio website built with Reac
 
 ## Live Demo
 
-You can view the live demo of this portfolio at: [Live Demo Link](https://your-live-demo-link.com)
+You can view the live demo of this portfolio at: https://alekpuleska.netlify.app/
 
 ## Installation
 
