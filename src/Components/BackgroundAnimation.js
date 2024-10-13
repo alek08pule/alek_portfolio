@@ -4,13 +4,14 @@ import React, { useEffect } from "react";
 import useWindowSize from "../Hooks/useWindowSize";
 
 const colors = ["#0B0909", "#44444C", "#8C8C8C", "#D6D6D6", "#2B89B2"];
-const numStars = 100;
+const numStars = 88;
 
 const BackgroundAnimation = () => {
   const { height, width } = useWindowSize();
 
   useEffect(() => {
     const bodyAnimation = document.querySelector(".bodyAnimation");
+    bodyAnimation.innerHTML = "";
     const stars = [];
 
     for (let i = 0; i < numStars; i++) {
