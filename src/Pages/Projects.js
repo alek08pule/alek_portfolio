@@ -72,12 +72,12 @@ const Projects = () => {
                   className="btn btn-color-1 project-btn"
                   onClick={() =>
                     window.open(
-                      "https://github.com/alek08pule/BudgetTrackerMVC",
+                      "https://budgettrackermvc20250110173630.azurewebsites.net/",
                       "_blank"
                     )
                   }
                 >
-                  Github
+                  Start
                 </button>
               </div>
             </div>
